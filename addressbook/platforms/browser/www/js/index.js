@@ -50,7 +50,16 @@ var app = {
     }
 
 };
+function alertDismissed() {
+    navigator.vibrate(2000);
+}
 function alertJs(){
         alert("ola amigo");
-        navigator.vibrate(2000); 
+         
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
     }

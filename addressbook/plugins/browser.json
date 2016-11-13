@@ -63,6 +63,10 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.addressbook"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "987654321",
+            "PACKAGE_NAME": "com.phonegap.addressbook"
         }
     },
     "dependent_plugins": {
