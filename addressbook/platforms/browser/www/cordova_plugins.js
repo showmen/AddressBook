@@ -604,19 +604,46 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/phonegap-plugin-push/www/push.js",
-        "id": "phonegap-plugin-push.PushNotification",
-        "pluginId": "phonegap-plugin-push",
+        "file": "plugins/pushbots-cordova-plugin/www/pushbots.js",
+        "id": "pushbots-cordova-plugin.PushbotsPlugin",
+        "pluginId": "pushbots-cordova-plugin",
         "clobbers": [
-            "PushNotification"
+            "PushbotsPlugin"
         ]
     },
     {
-        "file": "plugins/phonegap-plugin-push/www/browser/push.js",
-        "id": "phonegap-plugin-push.BrowserPush",
-        "pluginId": "phonegap-plugin-push",
+        "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+        "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
+        "pluginId": "com.telerik.plugins.nativepagetransitions",
         "clobbers": [
-            "PushNotification"
+            "window.plugins.nativepagetransitions"
+        ]
+    },
+    {
+        "file": "plugins/de.appplant.cordova.plugin.local-notification/www/local-notification.js",
+        "id": "de.appplant.cordova.plugin.local-notification.LocalNotification",
+        "pluginId": "de.appplant.cordova.plugin.local-notification",
+        "clobbers": [
+            "cordova.plugins.notification.local",
+            "plugin.notification.local"
+        ]
+    },
+    {
+        "file": "plugins/de.appplant.cordova.plugin.local-notification/www/local-notification-core.js",
+        "id": "de.appplant.cordova.plugin.local-notification.LocalNotification.Core",
+        "pluginId": "de.appplant.cordova.plugin.local-notification",
+        "clobbers": [
+            "cordova.plugins.notification.local.core",
+            "plugin.notification.local.core"
+        ]
+    },
+    {
+        "file": "plugins/de.appplant.cordova.plugin.local-notification/www/local-notification-util.js",
+        "id": "de.appplant.cordova.plugin.local-notification.LocalNotification.Util",
+        "pluginId": "de.appplant.cordova.plugin.local-notification",
+        "merges": [
+            "cordova.plugins.notification.local.core",
+            "plugin.notification.local.core"
         ]
     }
 ];
@@ -644,7 +671,10 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-vibration": "2.1.2",
     "cordova-plugin-whitelist": "1.2.2",
-    "phonegap-plugin-push": "1.8.4"
+    "pushbots-cordova-plugin": "1.4.0",
+    "com.telerik.plugins.nativepagetransitions": "0.6.5",
+    "de.appplant.cordova.plugin.local-notification": "0.8.4",
+    "cordova-plugin-app-event": "1.2.0"
 }
 // BOTTOM OF METADATA
 });

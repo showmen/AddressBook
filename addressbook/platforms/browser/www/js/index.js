@@ -34,8 +34,21 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        // navigator.notification.vibrate(2000);
-
+        var now = new Date();
+        cordova.plugins.notification.local.schedule({
+          id         : 1,
+          title      : 'I will bother you every minute',
+          text       : '.. until you cancel all notifications',
+          sound      : null,
+          every      : 'minute',
+          at         : now
+        });
+        
+                // StatusBar.hide();
+        // StatusBar.show();
+        // StatusBar.overlaysWebView(true);
+        // StatusBar.backgroundColorByName("black");
+        // window.plugins.PushbotsPlugin.initialize("58297dee4a9efa13688b4567", {"android":{"sender_id":"1038014068546"}});
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -50,16 +63,15 @@ var app = {
     }
 
 };
-function alertDismissed() {
-    navigator.vibrate(2000);
-}
 function alertJs(){
         alert("ola amigo");
-         
-        navigator.notification.alert(
-            'You are the winner!',  // message
-            alertDismissed,         // callback
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
+        navigator.vibrate(2000);
     }
+
+function callAnothePage()
+{
+    // window.location = "test.html";
+    $.mobile.changePage('test.html', { transition : 'slide'});
+}
+
+
